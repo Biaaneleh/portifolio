@@ -1,0 +1,289 @@
+/* ===== Reset e Tipografia Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: #F8F5F0; /* Off White Seda */
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ===== Cores da paleta BeleganceH ===== */
+:root {
+    --bordo: #660022;
+    --dourado: #E39929;
+    --offwhite: #F8F5F0;
+    --vinho: #8A3747;
+    --cinza: #3A3A3A;
+    --preto: #1A1A1A;
+}
+
+/* ===== Menu Lateral Fixo ===== */
+.menu-lateral {
+    width: 220px;
+    background-color: var(--bordo);
+    color: var(--offwhite);
+    padding: 30px 60px;
+    position: fixed;
+    height: 100vh;
+}
+
+.titulo-menu {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 30px;
+    color: var(--dourado);
+    margin-bottom: 42px;
+}
+
+.menu-lateral ul {
+    list-style: none;
+}
+
+.menu-lateral li {
+    margin-bottom: 20px;
+}
+
+.menu-lateral a {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--offwhite);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu-lateral a:hover {
+    color: var(--dourado);
+}
+
+/* ===== Conteúdo Principal ===== */
+.conteudo {
+    margin-left: 220px; /* Espaço igual à largura do menu */
+    width: calc(100% - 220px);
+}
+
+/* ===== Banner do topo ===== */
+.banner-topo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== Seção Sobre Mim ===== */
+.sobre-mim {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    align-items: flex-start;
+}
+
+/* ===== Moldura da foto ===== */
+.moldura-foto {
+    position: relative;
+    width: 240px;
+    height: 240px;
+}
+
+.borda-bordo {
+    background-color: var(--bordo);
+    border-radius: 15%;
+    padding: 15px;
+    width: 110%;
+    height: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+}
+
+.foto-perfil {
+    border-radius: 15%;
+    top: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dourado);
+    z-index: 1;
+}
+
+/* Moldura dourada atrás */
+.moldura-foto::before {
+     content: '';
+     position: absolute;
+     left: -1px;
+     width: 110%;
+     height: 150%;
+     background-color: var(--dourado);
+     border-radius: 0;
+     z-index: 1;
+
+}
+
+/* ===== Textos ao lado ===== */
+.texto-sobre {
+  flex: 1;
+}
+
+.texto-sobre h2 {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 30px;
+  color: var(--vinho);
+  text-align: left;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-left: 20px;;
+}
+
+.texto-sobre p {
+  font-family: 'Lora', serif;
+  font-size: 14.8px;
+  color: var(--preto);
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+/* ===== Página Formação ===== */
+.pagina-formacao {
+  padding: 40px;
+}
+
+.conteudo-formacao {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.conteudo-formacao h2 {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 30px;
+  color: var(--vinho);
+  text-align: left;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+.conteudo-formacao p {
+  font-family: 'Lora', serif;
+  font-size: 14.8px;
+  color: var(--preto);
+  text-align: left;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  padding: 20px;
+  border:5px double var(--cinza);
+}
+
+.conteudo-formacao ul{
+    border:5px double var(--cinza);
+    padding: 20px;
+}
+
+.conteudo-formacao li{
+    margin-left: 30px;
+}
+
+/* ===== Página Portifólio ===== */
+.portfolio {
+  padding: 40px 20px;
+}
+
+.titulo-pagina {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: var(--Dourado);
+  margin-bottom: 50px;
+}
+
+.card-projeto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.imagem-projeto {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 5px 10px var(--preto)
+}
+
+.descricao-projeto {
+  flex: 1 1 400px;
+  text-align: left;
+}
+
+.botao-visitar {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 0px;
+  background-color: var(--Vinho);
+  color: var(--dourado);
+  text-decoration: none;
+  font-family: 'Philosopher', sans-serif;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.botao-visitar:hover {
+  background-color: var(--Dourado);
+  color: var(--Preto);
+}
+
+/* ===== Página Contato ===== */
+
+.biscasaxê h1{
+  text-align: center;
+  margin-top: 50px;
+}
+
+form table {
+  width: 100%;
+  font-family: 'Lora', serif;
+  font-size: 15px;
+  margin-top: 100px;
+  margin-left: -100px;
+}
+
+form th {
+  text-align: right;
+  padding: 10px;
+  vertical-align: top;
+}
+
+form td {
+  padding: 10px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  font-family: 'Lora', serif;
+  border: 1px solid var(--vinho);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+form button {
+  background-color: var(--bordo);
+  color: var(--dourado);
+  padding: 10px 10px;
+  font-family: 'Philosopher', sans-serif;
+  border: hidden 1px var(--vinho);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: var(--Dourado);
+  color: var(--Preto);
+}
